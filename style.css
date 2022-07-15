@@ -4,97 +4,32 @@
     box-sizing: border-box;
 }
 
-/* Layout modules*/
-.l-drumkit {
+.wrapper {
     height: 100vh;
-    width: 1200px;
+    max-width: 1700px;
     margin: 0 auto;
+
+    /* display: grid; */
+    /* grid-template: 20% 80% / 70% 30%; */
+
+    border: 1px solid black;
 }
 
-/* Modules */
+.title {
+    background-color: blue;
+}
+
 .drumkit {
-    display: flex;
-}
-
-.drumkit__content-left {
-    flex-grow: 3;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.drumkit__title {
-    flex-grow: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: 'Edu VIC WA NT Beginner', cursive;
-    color: #43F4F7;
-}
-
-.drumkit__image-container {
-    flex: 0 0 500px;
-
-    width: 100%;
-    background: url('./images/drum-kit.png') no-repeat center;
+    background: ;
+    background-image: url('/images/drum-kit.png');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
-    background-position-y: -75px;
-    position: relative;
 }
 
-.drumkit__crash {
-    height: 36px;
-    width: 134px;
-
-    background: url('./images/crash.png') no-repeat center;
-    position: absolute;
-    top: 33px;
-    left: 266px;
+.keymap {
+    grid-area: 1 / 2 / 3 / 3;
+    background-color: yellow;
 }
 
-.drumkit__crash_initial {
-    transform: rotate(352.5deg);
-}
-
-.drumkit__hihat-top {
-    height: 39px;
-    width: 165px;
-    
-    background: url('./images/hihat-top.png') no-repeat center;
-    background-size: cover;
-    position: absolute;
-    top: 83px;
-    left: 562px;
-}
-
-.key {
-    height: 35px;
-    width: 35px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: sans-serif;
-    background-color: gainsboro;
-
-    border: 1.5px solid black;
-    border-radius: 4px;
-    box-shadow: black 1px 1px 1.5px;
-}
-
-.drumkit__image-container .key  {
-    position: absolute;
-}
-
-.key__crash {
-    left: 270px;
-}
-
-
-
-.drumkit__content-right {
-    flex-grow: 1;
-}
+/* @media only screen () */
