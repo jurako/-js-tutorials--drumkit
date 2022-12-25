@@ -4,45 +4,21 @@
     box-sizing: border-box;
 }
 
-.wrapper {
-    /* height: 90vh; */
-    height: 100vh;
-    min-height: 830px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 78% 22%;
-    grid-template-rows: 22% 78%;
-}
-
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    max-height: 300px;
-
-    background-color: blue;
-    font-family: 'Monoton', cursive;
-    font-size: 2rem;
-}
-
-.test {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    max-height: 300px;
+    padding-top: 3%;
 
     background-color: blue;
     font-family: 'Monoton', cursive;
-    font-size: 2rem;
+    font-size: 10vh;
+    line-height: 10vh;
+    height: min-content;
 }
 
 .drumkit {
-    height: 100%;
-    max-width: 1700px;
-    max-height: 100%;
+    height: 70vh;
     margin: 0 auto;
 
     background-image: url('/images/drum-kit.png');
@@ -56,8 +32,18 @@
     background-color: yellow;
 }
 
-@media (max-width: 1000px) {
+@media (max-height: 360px) {
+    .wrapper {
+        height: 80px;
+    }
+
+    .title {
+        height: 65px;
+        font-size: 10px;
+    }
+
     .drumkit {
-        background-color: pink !important;
+        height: 255px;
+        line-height: 1.2px;
     }
 }
