@@ -4,11 +4,10 @@
     box-sizing: border-box;
 }
 
-
-
 .wrapper {
+    /* height: 90vh; */
     height: 100vh;
-    max-width: 1700px;
+    min-height: 830px;
     margin: 0 auto;
 
     display: grid;
@@ -17,16 +16,38 @@
 }
 
 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-height: 300px;
+
     background-color: blue;
     font-family: 'Monoton', cursive;
-    font-size: 10%;
+    font-size: 2rem;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-height: 300px;
+
+    background-color: blue;
+    font-family: 'Monoton', cursive;
+    font-size: 2rem;
 }
 
 .drumkit {
-    background: ;
+    height: 100%;
+    max-width: 1700px;
+    max-height: 100%;
+    margin: 0 auto;
+
     background-image: url('/images/drum-kit.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: contain;
 }
 
@@ -35,4 +56,8 @@
     background-color: yellow;
 }
 
-/* @media only screen () */
+@media (max-width: 1000px) {
+    .drumkit {
+        background-color: pink !important;
+    }
+}
