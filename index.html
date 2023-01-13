@@ -11,11 +11,23 @@
 </head>
 
 <body>
-    <h1 class="title">JavaScript Drum Kit</h1>
-    <div class="drumkit-container">
-        <img class="drumkit" src="/images/drum-kit.png">
-        <img class="hihat" src="/images/hihat-top.png">
-    </div>
+    <header class="header">
+        <h1 class="title header__title">JavaScript Drum Kit</h1>
+    </header>
+    <section class="main">
+        <div class="drumkit main__drumkit">
+            <div class="drumkit__wrapper">
+                <img class="drumkit__set" src="/images/drum-kit.png">
+                <img class="drumkit__hihat" src="/images/hihat-top.png">
+                <img class="drumkit__crash drumkit__crash--init-pos" src="/images/crash.png">
+        
+                <!-- Button legends -->
+                <!-- <button class="button">
+                    <kbd>E</kbd>
+                </button> -->
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

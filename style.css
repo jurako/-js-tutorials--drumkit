@@ -4,34 +4,51 @@
     box-sizing: border-box;
 }
 
-.title {
-    /* flex-grow: 1; */
-
+.header__title {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+.title {
     font-family: 'Edu VIC WA NT Beginner', cursive;
     color: #43F4F7;
 }
 
-.drumkit-container {
+
+
+
+.main__drumkit {
     max-width: 581.1px;
     margin: 0 auto;
-
-    position: relative;
 
     border: 1px solid black;
 }
 
-.drumkit {
+.drumkit__wrapper {
+    position: relative;
+}
+
+.drumkit__set {
     width: 100%;
 }
 
-.hihat {
+.drumkit__hihat {
     width: 28.41%;
 
     position: absolute;
     top: 30.44%;
     left: 63.33%;
+}
+
+.drumkit__crash {
+    width: 29.98%;
+
+    position: absolute;
+    top: 20.61%;
+    left: 9.46%;
+}
+
+.drumkit__crash--init-pos {
+    transform: rotate(352.2deg);
 }
