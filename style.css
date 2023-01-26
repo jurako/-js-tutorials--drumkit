@@ -45,6 +45,7 @@
 
 .drumkit__set {
     width: 100%;
+    vertical-align: middle;
 }
 
 .drumkit__hihat {
