@@ -91,25 +91,55 @@
     position: absolute;
 }
 
-.drumkit__button-crash { top: 16.5%; left: 14%; }
+.drumkit__button-crash {
+    top: 16.5%;
+    left: 14%;
+}
 
-.drumkit__button-ride { top: 16.5%; left: 29%; }
+.drumkit__button-ride {
+    top: 16.5%;
+    left: 29%;
+}
 
-.drumkit__button-hihat-open { top: 27.5%; left: 67%; }
+.drumkit__button-hihat-open {
+    top: 27.5%;
+    left: 67%;
+}
 
-.drumkit__button-hihat-closed { top: 27.5%; left: 82.5%; }
+.drumkit__button-hihat-closed {
+    top: 27.5%;
+    left: 82.5%;
+}
 
-.drumkit__button-floor-tom { top: 61.5%; left: 24.5%; }
+.drumkit__button-floor-tom {
+    top: 61.5%;
+    left: 24.5%;
+}
 
-.drumkit__button-mid-tom { top: 43.5%; left: 37.5%; }
+.drumkit__button-mid-tom {
+    top: 43.5%;
+    left: 37.5%;
+}
 
-.drumkit__button-high-tom { top: 46.5%; left: 55.5%; }
+.drumkit__button-high-tom {
+    top: 46.5%;
+    left: 55.5%;
+}
 
-.drumkit__button-snare { top: 54%; left: 70%; }
+.drumkit__button-snare {
+    top: 54%;
+    left: 70%;
+}
 
-.drumkit__button-left-kick { top: 65%; left: 45%; }
+.drumkit__button-left-kick {
+    top: 65%;
+    left: 45%;
+}
 
-.drumkit__button-right-kick { top: 65%; left: 52%; }
+.drumkit__button-right-kick {
+    top: 65%;
+    left: 52%;
+}
 
 
 
@@ -119,38 +149,56 @@
         font-size: var(--fs-700);
     }
 }
+
 @media (max-width: 450px) {
     .button {
         font-size: var(--fs-600);
     }
 }
+
 @media (max-width: 400px) {
     .button {
         font-size: var(--fs-500);
     }
 }
+
 @media (max-width: 370px) {
     .button {
         font-size: var(--fs-400);
     }
 }
+
 @media (max-width: 350px) {
     .button {
         font-size: var(--fs-300);
     }
 }
+
 @media (max-width: 320px) {
     .button {
         font-size: var(--fs-200);
     }
 }
+
 @media (max-width: 290px) {
     .button {
         font-size: var(--fs-100);
     }
 }
+
 @media (max-width: 250px) {
     .drumkit__button {
         display: none;
     }
+}
+
+.drumkit__button {
+    margin-right: 0px;
+    transition: transform 0.1s ease-in;
+}
+
+.drumkit__button--active {
+    transform: scale(1.2);
+    /* transform: rotate(30deg); */
+    /* margin-right: 10px; */
 }
