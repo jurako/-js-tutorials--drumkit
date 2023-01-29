@@ -52,8 +52,14 @@
     width: 28.41%;
 
     position: absolute;
+    z-index: -1;
     top: 30.44%;
     left: 63.33%;
+    transition: top 0.04s ease-in;
+}
+
+.drumkit__hihat--closed-pos {
+    top: 31.44%;
 }
 
 .drumkit__crash {
@@ -62,10 +68,11 @@
     position: absolute;
     top: 20.61%;
     left: 9.46%;
+    transition: transform 0.04s ease-in;
 }
 
 .drumkit__crash--init-pos {
-    transform: rotate(352.2deg);
+    transform: rotate(-8deg);
 }
 
 
