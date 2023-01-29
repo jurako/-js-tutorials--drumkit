@@ -194,11 +194,9 @@
 
 .drumkit__button {
     margin-right: 0px;
-    transition: transform 0.1s ease-in;
+    transition: transform 0.04s ease-in;
 }
 
-.drumkit__button--active:hover {
+.drumkit__button--active {
     transform: scale(1.2);
-    /* transform: rotate(30deg); */
-    /* margin-right: 10px; */
 }
