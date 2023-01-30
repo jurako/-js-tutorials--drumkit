@@ -23,6 +23,9 @@ let buttonMap = {
     b: 'right-kick'
 };
 
+let crash = getEl(DRUMKIT_CRASH_SELECTOR);
+let hihat = getEl(DRUMKIT_HIHAT_SELECTOR);
+
 
 function getEl(selector) {
     return document.querySelector(selector);
@@ -38,27 +41,18 @@ function playAudio(drumkitPart) {
 function animateButton(el) {
     if (el !== null) {
         el.classList.add(DRUMKIT_ACTIVE_CLASS);
-        el.addEventListener('transitionend', function () {
-            this.classList.remove(DRUMKIT_ACTIVE_CLASS);
-        });
     }
 }
 
 function animateCrash(el) {
     if (el !== null) {
         el.classList.remove(DRUMKIT_CRASH_INIT_POS_CLASS);
-        el.addEventListener('transitionend', function () {
-            this.classList.add(DRUMKIT_CRASH_INIT_POS_CLASS);
-        });
     }
 }
 
 function animateHihat(el) {
     if (el !== null) {
         el.classList.add(DRUMKIT_HIHAT_CLOSED_POS_CLASS);
-        el.addEventListener('transitionend', function () {
-            this.classList.remove(DRUMKIT_HIHAT_CLOSED_POS_CLASS);
-        });
     }
 }
 
@@ -70,12 +64,29 @@ function buttonHandle(event) {
     animateButton(getEl(DRUMKIT_BUTTON_SELECTOR + button));
 
     if (button == 'crash' || button == 'ride') {
-        animateCrash(getEl(DRUMKIT_CRASH_SELECTOR));
+        animateCrash(crash);
     }
 
     if (button == 'hihat-closed') {
-        animateHihat(getEl(DRUMKIT_HIHAT_SELECTOR));
+        animateHihat(hihat);
     }
 }
 
+
+
 document.addEventListener('keydown', buttonHandle);
+
+for(let key in buttonMap) {
+    let button = getEl(DRUMKIT_BUTTON_SELECTOR + buttonMap[key]);
+    button.addEventListener('transitionend', function () {
+        this.classList.remove(DRUMKIT_ACTIVE_CLASS);
+    });
+}
+
+crash.addEventListener('transitionend', function () {
+    this.classList.add(DRUMKIT_CRASH_INIT_POS_CLASS);
+});
+
+hihat.addEventListener('transitionend', function () {
+    this.classList.remove(DRUMKIT_HIHAT_CLOSED_POS_CLASS);
+});
