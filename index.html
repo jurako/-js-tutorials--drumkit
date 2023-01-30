@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Drum kit</title>
 </head>
@@ -22,36 +22,36 @@
                 <img class="drumkit__crash drumkit__crash--init-pos" src="/images/crash.png">
 
                 <!-- Button legends -->
-                <button class="button button--shadow drumkit__button drumkit__button-crash">
+                <div class="button button--shadow drumkit__button drumkit__button-crash">
                     <kbd>E</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-ride">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-ride">
                     <kbd>R</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-hihat-open">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-hihat-open">
                     <kbd>I</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-hihat-closed">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-hihat-closed">
                     <kbd>K</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-floor-tom">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-floor-tom">
                     <kbd>F</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-mid-tom">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-mid-tom">
                     <kbd>G</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-high-tom">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-high-tom">
                     <kbd>H</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-snare">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-snare">
                     <kbd>J</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-left-kick">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-left-kick">
                     <kbd>V</kbd>
-                </button>
-                <button class="button button--shadow drumkit__button drumkit__button-right-kick">
+                </div>
+                <div class="button button--shadow drumkit__button drumkit__button-right-kick">
                     <kbd>B</kbd>
-                </button>
+                </div>
             </div>
             <div class="drumkit__audio">
                 <audio class="drumkit__audio--crash">
@@ -82,6 +82,18 @@
                     <source src="audio/kick.wav" type="audio/mpeg">
                 </audio>
             </div>
+        </div>
+        <div class="keymap main__keymap">
+            <h2 class="keymap__title">Key Mapping</h2>
+            <div class="keymap__legend"><div class="button">E</div>Crash</div>
+            <div class="keymap__legend"><div class="button">R</div>Ride</div>
+            <div class="keymap__legend"><div class="button">F</div>Floor tom</div>
+            <div class="keymap__legend"><div class="button">G</div>Mid tom</div>
+            <div class="keymap__legend"><div class="button">H</div>High tom</div>
+            <div class="keymap__legend"><div class="button">V</div><div class="button">B</div>Kick</div>
+            <div class="keymap__legend"><div class="button">J</div>Snare</div>
+            <div class="keymap__legend"><div class="button">I</div>Hi-Hat Open</div>
+            <div class="keymap__legend"><div class="button">K</div>Hi-Hat Closed</div>
         </div>
     </section>
 

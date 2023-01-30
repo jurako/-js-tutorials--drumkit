@@ -23,11 +23,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
 }
 
 .title {
-    font-family: 'Edu VIC WA NT Beginner', cursive;
-    color: #43F4F7;
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: red;
+    text-shadow: 1px 1px black;
 }
 
 
@@ -35,8 +38,6 @@
 .main__drumkit {
     max-width: 581.1px;
     margin: 0 auto;
-
-    border: 1px solid black;
 }
 
 .drumkit__wrapper {
@@ -78,9 +79,13 @@
 
 
 .button {
-    width: 5.71%;
-    height: 6.85%;
+    width: 33.18px;
+    height: 34.01px;
     background-color: #eaeaea;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     border: 2px solid #aaa;
     border-radius: 4px;
@@ -148,6 +153,45 @@
     left: 52%;
 }
 
+.keymap {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: 'Handlee', cursive;
+}
+
+.main__keymap {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.keymap__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 100px;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+}
+
+.keymap__legend {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.2em;
+}
+
+.keymap__legend:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.keymap__legend:last-child {
+    margin-bottom: 30px;
+}
 
 
 
@@ -196,6 +240,19 @@
 @media (max-width: 250px) {
     .drumkit__button {
         display: none;
+    }
+}
+
+@media (max-width: 230px) {
+    .title {
+        display: none;
+    }
+}
+
+@media (max-width: 1110px) {
+    .main__keymap {
+        position: relative;
+        width: 100vh;
     }
 }
 
